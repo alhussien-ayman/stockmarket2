@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="930.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="572.0" fitWidth="939.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Screen_2.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="button_start" graphicTextGap="9.0" layoutX="66.0" layoutY="379.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="95.0" style="-fx-background-color: #2D295B;" text="Start" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Metronic W01 Bold" size="14.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+   </children>
+</StackPane>

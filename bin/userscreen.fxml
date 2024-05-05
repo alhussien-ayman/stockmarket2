@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="930.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller">
+   <children>
+      <AnchorPane prefHeight="900.0" prefWidth="1150.0">
+         <children>
+            <ImageView fitHeight="565.0" fitWidth="956.0" layoutX="9.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@photos/ScreenBG-01.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="271.0" fitWidth="458.0" layoutX="-140.0" layoutY="-62.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@photos/logo-01.png" />
+               </image>
+            </ImageView>
+            <Button alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" graphicTextGap="12.0" layoutX="53.0" layoutY="137.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="26.0" prefWidth="111.0" style="-fx-background-color: FFFFFF; -fx-border-insets: 20;" stylesheets="@pageDesign.css" text="Balance" AnchorPane.leftAnchor="50.0">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@photos/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" graphicTextGap="12.0" layoutX="50.6" layoutY="184.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="111.0" style="-fx-background-color: FFFFFF;" stylesheets="@pageDesign.css" text="Button" AnchorPane.leftAnchor="50.6">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" graphicTextGap="12.0" layoutX="51.4" layoutY="237.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="111.0" style="-fx-background-color: FFFFFF;" stylesheets="@pageDesign.css" text="Button" AnchorPane.leftAnchor="51.4" />
+            <Button alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" graphicTextGap="12.0" layoutX="51.0" layoutY="286.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="111.0" style="-fx-background-color: FFFFFF;" stylesheets="@pageDesign.css" text="Button" AnchorPane.leftAnchor="51.0" />
+            <ImageView fitHeight="34.0" fitWidth="44.0" layoutX="853.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@photos/userprofile.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="896.0" layoutY="36.0" prefHeight="33.0" prefWidth="51.0" text="Active">
+               <font>
+                  <Font name="Open Sans Regular" size="12.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <Blend />
+         </effect>
+      </AnchorPane>
+   </children>
+</StackPane>
