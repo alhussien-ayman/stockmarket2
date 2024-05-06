@@ -2,7 +2,6 @@ package ClassesLogic;
 
 import java.util.List;
 
-import javafx.scene.effect.Light;
 
 // User.java
  class User {

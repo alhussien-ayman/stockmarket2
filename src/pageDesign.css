@@ -76,7 +76,7 @@
 
 .side_anchorpane {
     -fx-background-color: #074874;
-    -fx-background-radius: 5px;
+   
 
 }
 
@@ -87,15 +87,13 @@
 
 
 .nav-btn-1 {
-    -fx-border-color: #fff;
-    -fx-border-width: .5px;
     -fx-background-color: linear-gradient(#188ba7, #306090);
     -fx-text-fill: #fff;
     -fx-font-family: Arial;
     -fx-cursor: hand;
     -fx-font-size: 14px;
     -fx-alignment: CENTER;
-    -fx-background-radius: 5px;
+    
 }
 
 .nav-btn-12 {
@@ -125,5 +123,7 @@
     -fx-cursor: hand;
   
     -fx-alignment: CENTER;
-   
-    }
+ }
+
+      
+      

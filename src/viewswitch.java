@@ -1,7 +1,7 @@
 import java.io.IOException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
-import javafx.stage.Stage;
+
 
 public class viewswitch {
     private static Scene scene;

@@ -38,8 +38,8 @@
                   <PasswordField fx:id="login_password" layoutX="-1.0" layoutY="171.0" prefWidth="250.0" promptText="password" styleClass="textfield-2" stylesheets="@pageDesign.css" />
                   <TextField fx:id="login_username" layoutX="-1.0" layoutY="131.0" onAction="#switchform" prefWidth="250.0" promptText="Username" styleClass="textfield-1" stylesheets="@pageDesign.css" />
                   <CheckBox fx:id="login_checkBox" layoutX="-1.0" layoutY="207.0" mnemonicParsing="false" onAction="#login_showpassword" text="Show Password" textFill="WHITE" />
-                  <Button fx:id="login_login" layoutX="-1.0" layoutY="248.0" mnemonicParsing="false" onAction="#onlogin" onMouseClicked="#onlogin" prefHeight="41.0" prefWidth="250.0" styleClass="btn-2" stylesheets="@pageDesign.css" text="LOGIN" />
-                  <ComboBox fx:id="login_selectuser" editable="true" layoutX="54.0" layoutY="378.0" prefWidth="150.0" promptText="Select user" styleClass="btn-3" stylesheets="@pageDesign.css" />
+                  <Button fx:id="login_login" layoutX="-1.0" layoutY="248.0" mnemonicParsing="false" onAction="#loginsuccess" onMouseClicked="#onlogin" prefHeight="41.0" prefWidth="250.0" styleClass="btn-2" stylesheets="@pageDesign.css" text="LOGIN" />
+                  <ComboBox fx:id="login_selectuser" editable="true" layoutX="54.0" layoutY="378.0" onAction="#switchPage" prefWidth="150.0" promptText="Select user" styleClass="btn-3" stylesheets="@pageDesign.css" />
                   <Label layoutX="23.0" layoutY="430.0" text="Have no account yet?" textAlignment="JUSTIFY" textFill="WHITE" />
                   <Hyperlink fx:id="login_registerhere" layoutX="145.0" layoutY="427.0" onAction="#switchform" text="Register here" textAlignment="JUSTIFY" />
                </children>

@@ -1,6 +1,7 @@
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,18 +11,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Hyperlink;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.geometry.Rectangle2D;
-import javafx.scene.Cursor;
-import javafx.scene.Parent;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.Scene;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 public class controller implements Initializable {
@@ -91,18 +87,6 @@ public class controller implements Initializable {
 
     }
 
-    // login Action 
-    // public void loginAccount() {
-
-    //     if (login_username.getText().isEmpty()
-    //             || login.getText().isEmpty()) {
-    //         alert.errorMessage("Please fill all blank fields");
-    //     } else {
-
-    //         alert.confirmationMessage("successful register");
-    //     }
-
-    // }
 
     // sign up button action
     public void LoginAccount() {
@@ -143,12 +127,6 @@ public class controller implements Initializable {
         }
     }
 
-    public void registerClear() {
-        register_email.clear();
-        register_username.clear();
-        register_password.clear();
-        register_showpassword.clear();
-    }
 
     public void switchform(ActionEvent event) {
         if (event.getSource() == login_registerhere) {
@@ -160,30 +138,103 @@ public class controller implements Initializable {
         }
     }
 
-    // public void switchScene() throws Exception {
-    //     Stage primarystage = (Stage) login_login.getScene().getWindow();
-    //     primarystage.close();
-    //     Parent root2 = FXMLLoader.load(getClass().getResource("startscreen.fxml"));
-    //     Stage stage = new Stage();
-    //     stage.setScene(new Scene(root2));
-    //     stage.show();
+    // user or admin list
+    // @SuppressWarnings("unchecked")
+    public void userList() {
+
+        List< String > listU = new ArrayList<>();
+
+        for (String data : useroradmin.user) {
+            listU.add(data);
+        }
+       
+        ObservableList listData = FXCollections.observableList(listU);
+        login_selectuser.setItems(listData);
+    }
+
+    // login_login button
+    public void loginsuccess() {
+        if (login_username.getText().isEmpty() || login_password.getText().isEmpty()) {
+            alert.errorMessage("fill in the planks please!");
+        } else
+
+        {
+            alert.confirmationMessage("you are successfully created account ");
+        }
+
+    }
+    // @FXML
+    // private Button button;
+
+    // @FXML
+    // private Label label;
+    // @FXML
+    // void handleButtonAction(ActionEvent event) {
+    // }
+    // first switch page
+    public void switchPage(ActionEvent event) {
+
+        if (!login_username.getText().isEmpty() && !login_password.getText().isEmpty()) {
+            if (login_selectuser.getSelectionModel().getSelectedItem() == "admin") {
+
+                try {
+                    Parent root = FXMLLoader.load(getClass().getResource("fxmldocument.fxml"));
+                    Stage stage = new Stage();
+
+                    stage.setTitle("Stock Manager");
+
+                    stage.setMinWidth(340);
+                    stage.setMinHeight(580);
+                    stage.setScene(new Scene(root ));
+                    stage.show();
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            } else if (login_selectuser.getSelectionModel().getSelectedItem() == "user") {
+
+                try {
+                    Parent root =  FXMLLoader.load(getClass().getClassLoader().getResource("UserScreen2.fxml"));
+                    Stage stage = new Stage();
+                    stage.setTitle("Stock Exchange");
+                    stage.setScene(new Scene(root));
+                    stage.show();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        } else if (login_username.getText().isEmpty() && login_password.getText().isEmpty()) {
+            alert.errorMessage("fill in the planks please!");
+        }
+    }
+
+    // public void homepagecontroller(ActionEvent event) {
+    // if (event.getSource() == user_stockbtn) {
+    // homescreen.setVisible((false));
+    // stockscreen.setVisible(true);
+    // } else if (event.getSource() == user_homebtn) {
+    // homescreen.setVisible((true));
+    // stockscreen.setVisible(false);
+    // }else if (event.getSource() == login_login){
+    // homescreen.setVisible((true));
+    // stockscreen.setVisible(false);
+    // main_form.setVisible(false);
+    // }
     // }
 
-    public void onlogin(){
-        
+    public void onlogin() {
+
         viewswitch.switchto(view.userscreen);
-        
+
     }
-    //  @FXML
-    // void onlogin(MouseEvent event) {
-    //     viewswitch.switchto(view.userscreen);
-    // }
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        // TODO Auto-generated method stub
+       
+        userList();
         // login_selectuser.getItems().removeAll(login_selectuser.getItems());
-        // login_selectuser.getItems().addAll("Admin", "User");
+        // userList();
 
     }
 

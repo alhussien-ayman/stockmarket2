@@ -18,7 +18,7 @@
          <children>
             <AnchorPane layoutX="200.0" layoutY="10.0" prefHeight="70.0" prefWidth="740.0" styleClass="userscreentop" stylesheets="@pageDesign.css">
                <children>
-                  <ImageView fitHeight="22.0" fitWidth="18.0" layoutX="653.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" styleClass="btn-3">
+                  <ImageView fitHeight="22.0" fitWidth="18.0" layoutX="654.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" styleClass="btn-3">
                      <image>
                         <Image url="@photos/settings.png" />
                      </image>

@@ -2,6 +2,7 @@ public enum view {
     FxmlDocument("fxmldocument.fxml"),
     userscreen("userscreen.fxml");
 
+
     private String fileName;
 
     view(String fileName) {
