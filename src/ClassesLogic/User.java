@@ -1,11 +1,14 @@
 package ClassesLogic;
 
-public class User {
+import java.util.*;
+
+public abstract class User {
     private String username;
     private String password;
     private String fullName;
     private String email;
     protected static double balance;
+    List<RegularUser> Users = new ArrayList<>();
 
     public User(String username, String password, String fullName, String email, double balance) {
         this.username = username;
@@ -67,6 +70,11 @@ public class User {
         } else {
             System.out.println("Insufficient balance.");
         }
+    }
+
+    public void createUser(RegularUser user) {
+        Users.add(user);
+        System.out.println(" User " + user.getUsername() + " created successfully");
     }
 
     @Override

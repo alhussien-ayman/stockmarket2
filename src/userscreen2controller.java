@@ -13,6 +13,9 @@ public class userscreen2controller {
     @FXML
     private Button userscreen2_deposit;
 
+    // private Stage stage;
+    // private Parent root ;
+
     public void switchtostockscreen(ActionEvent event) {
         if (event.getSource() == UserScreen2_orderstocks) {
 

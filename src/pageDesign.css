@@ -96,6 +96,23 @@
     
 }
 
+.nav-btn-exit {
+    -fx-background-color: transparent;
+ 
+   
+    -fx-text-fill: #fff;
+    -fx-font-family: Tahoma;
+    -fx-cursor: hand;
+    -fx-font-size: 16px;
+    -fx-alignment: CENTER;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.nav-btn-exit:hover {
+    -fx-background-color: #4992b1;
+    -fx-text-fill: #000;
+}
 .nav-btn-12 {
     -fx-background-color: transparent;
     -fx-border-color: #fff;

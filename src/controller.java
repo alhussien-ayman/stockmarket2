@@ -19,7 +19,30 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import java.io.*;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Hyperlink;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 public class controller implements Initializable {
 
     @FXML
@@ -72,6 +95,10 @@ public class controller implements Initializable {
 
     @FXML
     private TextField register_username;
+
+    private Stage stage;
+    private Parent root;
+
     private Alertmessage alert = new Alertmessage();
 
     // login button action
@@ -86,7 +113,6 @@ public class controller implements Initializable {
         }
 
     }
-
 
     // sign up button action
     public void LoginAccount() {
@@ -127,7 +153,6 @@ public class controller implements Initializable {
         }
     }
 
-
     public void switchform(ActionEvent event) {
         if (event.getSource() == login_registerhere) {
             login_form.setVisible((false));
@@ -142,12 +167,12 @@ public class controller implements Initializable {
     // @SuppressWarnings("unchecked")
     public void userList() {
 
-        List< String > listU = new ArrayList<>();
+        List<String> listU = new ArrayList<>();
 
         for (String data : useroradmin.user) {
             listU.add(data);
         }
-       
+
         ObservableList listData = FXCollections.observableList(listU);
         login_selectuser.setItems(listData);
     }
@@ -178,14 +203,11 @@ public class controller implements Initializable {
             if (login_selectuser.getSelectionModel().getSelectedItem() == "admin") {
 
                 try {
-                    Parent root = FXMLLoader.load(getClass().getResource("fxmldocument.fxml"));
-                    Stage stage = new Stage();
-
-                    stage.setTitle("Stock Manager");
-
-                    stage.setMinWidth(340);
-                    stage.setMinHeight(580);
-                    stage.setScene(new Scene(root ));
+                    root = FXMLLoader.load(getClass().getResource("adminscreen.fxml"));
+                    // Stage stage = new Stage();
+                    stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    Scene scene = new Scene(root, 350, 520);
+                    stage.setScene(scene);
                     stage.show();
 
                 } catch (Exception e) {
@@ -195,8 +217,8 @@ public class controller implements Initializable {
             } else if (login_selectuser.getSelectionModel().getSelectedItem() == "user") {
 
                 try {
-                    Parent root =  FXMLLoader.load(getClass().getClassLoader().getResource("UserScreen2.fxml"));
-                    Stage stage = new Stage();
+                     root = FXMLLoader.load(getClass().getClassLoader().getResource("UserScreen2.fxml"));
+                    stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     stage.setTitle("Stock Exchange");
                     stage.setScene(new Scene(root));
                     stage.show();
@@ -231,7 +253,7 @@ public class controller implements Initializable {
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-       
+
         userList();
         // login_selectuser.getItems().removeAll(login_selectuser.getItems());
         // userList();

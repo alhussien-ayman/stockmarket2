@@ -10,17 +10,16 @@ public class Main extends Application {
     public void start(Stage primarystage) throws Exception {
         Parent root1 = FXMLLoader.load(getClass().getResource("fxmldocument.fxml"));
         primarystage.setTitle("login form");
-        primarystage.setMinWidth(320);
-        primarystage.setMaxWidth(350);
-        primarystage.setMinHeight(520);
-        primarystage.setMaxHeight(580);
-        primarystage.setScene(new Scene(root1,330,550));
+        // primarystage.setMinWidth(320);
+        // primarystage.setMaxWidth(350);
+        // primarystage.setMinHeight(520);
+        // primarystage.setMaxHeight(580);
+        primarystage.setScene(new Scene(root1));
         //  primarystage.setMaximized(true);
         primarystage.setFullScreen(false);
         primarystage.show();
-
     }
-
+    
     public static void main(String[] args) {
         launch(args);
     }
