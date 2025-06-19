@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.chart.CategoryAxis?>
-<?import javafx.scene.chart.LineChart?>
-<?import javafx.scene.chart.NumberAxis?>
+<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
@@ -10,13 +8,14 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="570.0" minWidth="900.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userscreen2controller">
    <left>
-      <AnchorPane prefHeight="520.0" prefWidth="198.0" styleClass="nav-btn-1" stylesheets="@pageDesign.css" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="520.0" prefWidth="198.0" stylesheets="@pageDesign.css" BorderPane.alignment="CENTER">
          <children>
             <Button layoutX="23.0" layoutY="126.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="151.0" styleClass="nav-btn-12" stylesheets="@pageDesign.css" text="Home">
                <font>
@@ -69,7 +68,7 @@
                </image>
             </ImageView>
             <Label layoutX="50.0" layoutY="96.0" text="Hello, username" textFill="WHITE" />
-            <Button layoutX="23.0" layoutY="488.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="90.0" styleClass="nav-btn-exit" stylesheets="@pageDesign.css" text="Exit" textFill="WHITE">
+            <Button layoutX="23.0" layoutY="488.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="135.0" styleClass="nav-btn-exit" stylesheets="@pageDesign.css" text="Sign out" textFill="WHITE" AnchorPane.bottomAnchor="18.0">
                <graphic>
                   <ImageView fitHeight="33.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -79,20 +78,24 @@
                </graphic>
             </Button>
          </children>
+         <styleClass>
+            <String fx:value="nav-btn-1" />
+            <String fx:value="shadow" />
+         </styleClass>
       </AnchorPane>
    </left>
    <right>
       <VBox prefHeight="548.0" prefWidth="96.0" styleClass="nav-btn-12" stylesheets="@pageDesign.css" BorderPane.alignment="CENTER" />
    </right>
    <top>
-      <AnchorPane cache="true" mouseTransparent="true" prefHeight="22.0" prefWidth="707.0" style="-fx-background-color: #dbecf2;" BorderPane.alignment="CENTER">
+      <AnchorPane cache="true" mouseTransparent="true" prefHeight="22.0" prefWidth="707.0" style="-fx-background-color: #dbecf2;" styleClass="shadow" stylesheets="@pageDesign.css" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="28.0" fitWidth="14.0" layoutX="856.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="28.0" fitWidth="14.0" layoutX="856.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="40.0">
                <image>
                   <Image url="@photos/bell.png" />
                </image>
             </ImageView>
-            <Label layoutX="21.0" layoutY="4.0" prefHeight="16.0" prefWidth="208.0" text="Home Page : stock Market" textFill="#346886">
+            <Label layoutX="21.0" layoutY="4.0" prefHeight="16.0" prefWidth="208.0" text="Stock Market : Home Page">
                <font>
                   <Font name="Arial" size="13.0" />
                </font>
@@ -104,21 +107,8 @@
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <Separator layoutX="264.0" orientation="VERTICAL" prefHeight="550.0" prefWidth="13.0" visible="false" />
-            <AnchorPane layoutX="23.0" layoutY="172.0" prefHeight="355.0" prefWidth="584.0">
-               <children>
-                  <LineChart alternativeColumnFillVisible="true" layoutY="6.0" prefHeight="274.0" prefWidth="544.0" titleSide="RIGHT">
-                    <xAxis>
-                      <CategoryAxis side="BOTTOM" />
-                    </xAxis>
-                    <yAxis>
-                      <NumberAxis side="LEFT" />
-                    </yAxis>
-                  </LineChart>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="23.0" layoutY="14.0" prefHeight="118.0" prefWidth="170.0" styleClass="nav-btn-1" stylesheets="@pageDesign.css" />
-            <AnchorPane layoutX="231.0" layoutY="14.0" prefHeight="118.0" prefWidth="168.0" styleClass="nav-btn-1" stylesheets="@pageDesign.css" />
-            <AnchorPane layoutX="432.0" layoutY="14.0" prefHeight="118.0" prefWidth="168.0" styleClass="nav-btn-1" stylesheets="@pageDesign.css" />
+            <AnchorPane layoutX="23.0" layoutY="172.0" prefHeight="355.0" prefWidth="584.0" stylesheets="@pageDesign.css" />
+            <HBox prefHeight="162.0" prefWidth="610.0" AnchorPane.bottomAnchor="378.4" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
          </children>
       </AnchorPane>
    </center>

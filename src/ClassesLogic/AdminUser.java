@@ -35,7 +35,5 @@ public class AdminUser extends User {
         setBalance(updatedUser.getBalance());
     }
 
-    public void retrieveUser(RegularUser user) {
-        Users.get(user);
-    }
+   
 }

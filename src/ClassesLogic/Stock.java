@@ -1,24 +1,56 @@
 package ClassesLogic;
 
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+
 public class Stock {
-    private String symbol;
+    private Button Buy;
+    private String number;
     private String name;
     private double price;
-    private int quantity;
+    // private int quantity;
+    private TextField  quantity;
 
-    public Stock(String symbol, String name, double price, int quantity) {
-        this.symbol = symbol;
+    public Stock(String Buy, String number, String name, double price, String quantity) {
+        this.Buy =new Button("Buy") ;
+        this.number = number;
         this.name = name;
         this.price = price;
-        this.quantity = quantity;
+        this.quantity = new TextField(quantity);
     }
 
-    public String getSymbol() {
-        return symbol;
+    // public void updatePrice(double newPrice) {
+    //     this.price = newPrice;
+    // }
+
+    // public void updateQuantity(int newQuantity) {
+    //     this.quantity = newQuantity;
+    // }
+
+    @Override
+    public String toString() {
+        return "Stock{" +
+                "symbol='" + '\'' +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                '}';
     }
 
-    public void setSymbol(String symbol) {
-        this.symbol = symbol;
+    public Button getBuy() {
+        return Buy;
+    }
+
+    public void setButton(Button buy) {
+        this.Buy = buy;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
     }
 
     public String getName() {
@@ -37,29 +69,17 @@ public class Stock {
         this.price = price;
     }
 
-    public int getQuantity() {
+    public TextField getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(TextField quantity) {
         this.quantity = quantity;
     }
 
-    public void updatePrice(double newPrice) {
-        this.price = newPrice;
+    public String getSymbol() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getSymbol'");
     }
 
-    public void updateQuantity(int newQuantity) {
-        this.quantity = newQuantity;
-    }
-
-    @Override
-    public String toString() {
-        return "Stock{" +
-                "symbol='" + symbol + '\'' +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                ", quantity=" + quantity +
-                '}';
-    }
 }
